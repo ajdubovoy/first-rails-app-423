@@ -1,0 +1,14 @@
+<h2>Contact Us</h2>
+
+<h3>Meet All Our Team Members</h3>
+
+<form action="/contact" method="GET">
+  <input value="<%= params[:member] %>" type="search" name="member" placeholder="Who are you searching for?">
+  <input type="submit" name="submit">
+</form>
+
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ul>
